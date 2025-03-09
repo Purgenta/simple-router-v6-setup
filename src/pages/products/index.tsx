@@ -8,10 +8,10 @@ import ProductDetails from './tabs/details'
 const ProductRoute = () => 
 
 
-  <Route>
-    <Route path='overview' element={ProductOverview}/>
-    <Route path='details' element={ProductDetails}/>
-  </Route>
+  <Routes>
+    <Route path='overview' element={<ProductOverview/>}/>
+    <Route path='details' element={<ProductDetails/>}/>
+  </Routes>
 
 
 export default ProductRoute

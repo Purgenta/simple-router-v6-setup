@@ -1,18 +1,16 @@
 
-import { Routes,Route, NavLink } from 'react-router'
+import { Routes,Route } from 'react-router'
 import './App.css'
 import ProductRoute from './pages/products'
-import ProductDetails from './pages/products/tabs/details'
-import ProductOverview from './pages/products/tabs/overview'
+import history from './utils'
 function App() {
 
 
   return <>
-  <NavLink to="product/123/overview">To product overview</NavLink>
+  <button onClick={() => history.push('/product/123/overview')}> on route overview</button>
   <Routes>
     <Route path='product' >
-      <Route path=':productId' element={<ProductRoute/>}>
-    
+      <Route path=':productId/*' element={<ProductRoute/>}>
       </Route>
     </Route>
   </Routes>
